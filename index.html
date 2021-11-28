@@ -155,9 +155,9 @@ function selectSoftware() {
 function NoComPortHelp() {
     document.getElementById('L04').innerHTML = "";
     if(document.getElementById('lang').selectedIndex==0) {
-        document.getElementById('comporthelp').innerHTML = "<br>Ist Dein USB Kabel geeignet für Datentransfer ?<br><br>Vielelicht fehlt der USB Treiber für Dein Board. Die meisten Boards verwenden einen von diesen:<br>- Viele fertige ESP32 Module: <a href=\"https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers\" target=\"_blank\">CP210x (quadratischer Chip)</a><br>- Olimex, CAN-Gateway dev board: <a href=\"http://www.wch-ic.com/downloads/CH341SER_EXE.html\" target=\"_blank\">CH34x (Rechteck Chip)</a><br><br>";
+        document.getElementById('comporthelp').innerHTML = "<br>Ist Dein USB Kabel geeignet für Datentransfer ?<br><br>Vielelicht fehlt der USB Treiber für Dein Board. Die meisten Boards verwenden einen von diesen:<br>- Viele fertige ESP32 Module: <a href=\"https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers\" target=\"_blank\">CP210x (quadratischer Chip)</a><br>- Olimex, CAN-Gateway dev board: <a href=\"https://www.wch-ic.com/downloads/CH341SER_EXE.html\" target=\"_blank\">CH34x (Rechteck Chip)</a><br><br>";
     } else {
-        document.getElementById('comporthelp').innerHTML = "<br>Check if your USB cable supports data transfer.<br><br>Eventually you have to install the drivers for your board.<br>Here are drivers commonly used in ESP32 boards:<br>- often used in vaious modules: <a href=\"https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers\" target=\"_blank\">CP210x (small square chip)</a><br>- used on CAN-Gateway dev board, Olimex board: <a href=\"http://www.wch-ic.com/downloads/CH341SER_EXE.html\" target=\"_blank\">CH34x (rectangular chip)</a><br><br>";
+        document.getElementById('comporthelp').innerHTML = "<br>Check if your USB cable supports data transfer.<br><br>Eventually you have to install the drivers for your board.<br>Here are drivers commonly used in ESP32 boards:<br>- often used in vaious modules: <a href=\"https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers\" target=\"_blank\">CP210x (small square chip)</a><br>- used on CAN-Gateway dev board, Olimex board: <a href=\"https://www.wch-ic.com/downloads/CH341SER_EXE.html\" target=\"_blank\">CH34x (rectangular chip)</a><br><br>";
     }
 }
 
