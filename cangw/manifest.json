@@ -9,7 +9,7 @@
         { "path": "bootloader_qio_80m.bin", "offset": 4096 },
         { "path": "CAN_Gateway.ino.partitions.bin", "offset": 32768 },
         { "path": "boot_app0.bin", "offset": 57344 },
-        { "path": "CAN_Gateway_Demo.bin", "offset": 65536 }
+        { "path": "CAN_Gateway_V28_100_DEMO.bin", "offset": 65536 }
       ]
     }
   ]
