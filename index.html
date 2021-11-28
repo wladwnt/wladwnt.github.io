@@ -87,13 +87,13 @@ select:focus::-ms-value {
           <div><span id="L11">Board Typ: </span>
           <div class="select-wrapper">
           <select id="software_version" onchange="selectSoftware()">
-              <option data-manifest_file="cangw/manifest_V8.json"><span id="L06">CAN-Gateway Demo for CAN-Gateway development board V8</span></option>
-              <option data-manifest_file="cangw/manifest_V5.json"><span id="L07">CAN-Gateway Demo for CAN-Gateway HW V5</span></option>
-              <option data-manifest_file="cangw/manifest_olimex.json"><span id="L08">CAN-Gateway Demo for Olimex ESP32-EVB(-EA) board</span></option>
+              <option data-manifest_file="/cangw/manifest_V8.json"><span id="L06">CAN-Gateway Demo for CAN-Gateway development board V8</span></option>
+              <option data-manifest_file="/cangw/manifest_V5.json"><span id="L07">CAN-Gateway Demo for CAN-Gateway HW V5</span></option>
+              <option data-manifest_file="/cangw/manifest_olimex.json"><span id="L08">CAN-Gateway Demo for Olimex ESP32-EVB(-EA) board</span></option>
           </select>
           </div>
           </div><br>
-          <esp-web-install-button id="install_btn" manifest="cangw/manifest.json" >
+          <esp-web-install-button id="install_btn" manifest="/cangw/manifest.json" >
             <button slot="activate"><span id="L09">Installieren<span></button>
           </esp-web-install-button><br><br>
       </div>
