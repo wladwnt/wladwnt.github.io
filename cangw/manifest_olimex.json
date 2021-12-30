@@ -1,6 +1,6 @@
 {
   "name": "CAN-Gateway (for board type: olimex ESP32-EVB)",
-  "version": "29.100",
+  "version": "29.201",
   "new_install_skip_erase": false,
   "builds": [
     {
