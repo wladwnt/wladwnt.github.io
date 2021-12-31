@@ -1,5 +1,5 @@
 {
-  "name": "CAN-Gateway (for board type: V8)",
+  "name": "CAN-Gateway (for board type: Olimex)",
   "version": "29.201",
   "builds": [
     {
