@@ -1,5 +1,5 @@
 {
-  "name": "CAN-Gateway (for board type: V8)",
+  "name": "CAN-Gateway (for board type: V5)",
   "version": "29.201",
   "builds": [
     {
