@@ -103,8 +103,10 @@ select:focus::-ms-value {
           <esp-web-install-button id="install_btn" manifest="/cangw/manifest.json" >
             <button slot="activate"><span id="L09">Installieren<span></button>
           </esp-web-install-button><br><br>
-      </div>
-      <div>
+     </div>
+  </div>
+        <hr>
+        <div>
         <span id="L15">Nach der Installation:</span>
         <ul>
           <li><span id="L12">Erste Schritte: <a href="https://github.com/wladwnt/CAN-Gateway/wiki/Inbetriebnahme">Wiki zu Inbetriebnahme</a></span></li>
@@ -112,11 +114,10 @@ select:focus::-ms-value {
           <li><span id="L14">Zurück zu Projektseite: <a href="https://github.com/wladwnt/CAN-Gateway/">Projektseite auf Github</a></span></li>
         </ul>
       </div>
-  </div>
 <script>
 function LangChanged() {
     if(document.getElementById('lang').selectedIndex==0) {
-        if(document.getElementById('L10')) document.getElementById('L10').innerHTML = "Leider Ihr Browser wird aktuell nicht unterstützt!<br>Bitte versuchen Sie mit Google Chrome (für Desktop) oder Microsoft Edge.";
+        if(document.getElementById('L10')) document.getElementById('L10').innerHTML = "Leider wird Ihr Browser aktuell nicht unterstützt!<br>Bitte versuchen Sie mit Google Chrome (für Desktop) oder Microsoft Edge.";
         if(document.getElementById('L01')) document.getElementById('L01').innerHTML = "Schliessen Sie Ihr ESP32 Board/ CAN-Gateway Board an USB an.";
         if(document.getElementById('L02')) document.getElementById('L02').innerHTML = "Wählen Sie den Board-Typ aus";
         if(document.getElementById('L03')) document.getElementById('L03').innerHTML = "Klicken Sie auf \"Installieren\" und wählen dann den korrekten COM-Port aus. ";
@@ -171,7 +172,7 @@ function NoComPortHelp() {
 window.onload = function () {
     if (document.getElementById('install_btn').hasAttribute('install-unsupported')) {
         if(document.getElementById('lang').selectedIndex==0) {
-            document.getElementById('FullContainer').innerHTML = "<span id=\"L10\">Leider Ihr Browser wird aktuell nicht unterstützt!<br>Bitte versuchen Sie mit Google Chrome (für Desktop) oder Microsoft Edge.</span><br>"; 
+            document.getElementById('FullContainer').innerHTML = "<span id=\"L10\">Leider wird Ihr Browser aktuell nicht unterstützt!<br>Bitte versuchen Sie mit Google Chrome (für Desktop) oder Microsoft Edge.</span><br>"; 
         } else {
             document.getElementById('FullContainer').innerHTML = "<span id=\"L10\">Unfortunately your browser is not yet supported!<br>Please try on Chrome (for Desktop) or Microsoft Edge.</span><br>";
         }
