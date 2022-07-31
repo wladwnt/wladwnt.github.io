@@ -1,13 +1,13 @@
 {
   "name": "CAN-Gateway (for board type: Olimex)",
-  "version": "29.201",
+  "version": "29.313",
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
         { "path": "boot_app0_v202.bin", "offset": 57344 },
         { "path": "CAN_Gateway.ino.bootloader_v202.bin", "offset": 4096 },
-        { "path": "CAN_Gateway.ino_DEMO_V29.201_HWOlimex.bin", "offset": 65536 },
+        { "path": "CAN_Gateway_V29_313_DEMO_HWOlimex.bin", "offset": 65536 },
         { "path": "CAN_Gateway.ino.partitions_v202.bin", "offset": 32768 }
       ]
     }
