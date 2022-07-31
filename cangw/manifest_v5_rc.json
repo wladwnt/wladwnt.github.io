@@ -1,6 +1,6 @@
 {
   "name": "CAN-Gateway (for board type: V5)",
-  "version": "29.201",
+  "version": "29.313",
   "builds": [
     {
       "chipFamily": "ESP32",
