@@ -42,9 +42,9 @@
 		  <div class="form-floating">
 			<select id="software_version" onchange="selectSoftware();" class="form-select" aria-label="" style="min-width: 20em; width:auto;">
            <optgroup label="Version 29.330 DEMO">
-              <option data-manifest_file="/cangw/manifest_v8_rc.json"><span id="L06">CAN-Gateway Demo for CAN-Gateway development board V8</span></option>
-              <option data-manifest_file="/cangw/manifest_v5_rc.json"><span id="L07">CAN-Gateway Demo for CAN-Gateway HW V5</span></option>
-              <option data-manifest_file="/cangw/manifest_olimex_rc.json"><span id="L08">CAN-Gateway Demo for Olimex ESP32-EVB(-EA) board</span></option>
+              <option data-manifest_file="/cangw/manifest_v8_rc.json" data-download_file="/cangw/CAN_Gateway_V29_330_DEMO_HWV7.bin"><span id="L06">CAN-Gateway Demo for CAN-Gateway development board V8</span></option>
+              <option data-manifest_file="/cangw/manifest_v5_rc.json" data-download_file="/cangw/CAN_Gateway_V29_330_DEMO_HWV5.bin"><span id="L07">CAN-Gateway Demo for CAN-Gateway HW V5</span></option>
+              <option data-manifest_file="/cangw/manifest_olimex_rc.json" data-download_file="/cangw/CAN_Gateway_V29_330_DEMO_HWVOlimex.bin"><span id="L08">CAN-Gateway Demo for Olimex ESP32-EVB(-EA) board</span></option>
             </optgroup>
 	</select>
 				<label for="software_version"><span id="L11">Board Typ / SW Version:</span></label>
@@ -57,6 +57,12 @@
           </esp-web-install-button>
       </div>
     </div>
+	<div>
+		<br>
+		<div class="container download-button">
+	      <a href="" class="btn btn-primary" id="download_btn"><span id="L20">Nur die .bin Datei herunterladen (später manuell installieren)</span></a>
+	    </div>
+	</div>
   <hr>
         <div>
         <h5 id="L15">Nach der Installation:</h5>
@@ -114,7 +120,8 @@ function LangChanged() {
         if(document.getElementById('L14')) document.getElementById('L14').innerHTML = "Zurück zu Projektseite: <a href=\"https://github.com/wladwnt/CAN-Gateway/\">Projektseite auf Github</a>";
         if(document.getElementById('L15')) document.getElementById('L15').innerHTML = "Nach der Installation:";
         if(document.getElementById('L18')) document.getElementById('L18').innerHTML = 'Impressum';
-        if(document.getElementById('L19')) document.getElementById('L19').innerHTML = 'Datenschutzerklärung';      
+        if(document.getElementById('L19')) document.getElementById('L19').innerHTML = 'Datenschutzerklärung';  
+		if(document.getElementById('L20')) document.getElementById('L20').innerHTML = 'Nur die .bin Datei herunterladen (später manuell installieren)';  		
     } else {
        if(document.getElementById('L10')) document.getElementById('L10').innerHTML = "Unfortunately your browser is not yet supported!<br>Please try on Chrome (for Desktop) or Microsoft Edge.";
         if(document.getElementById('L01')) document.getElementById('L01').innerHTML = "Connect your ESP32 board/ CAN-Gateway board via USB port";
@@ -133,6 +140,7 @@ function LangChanged() {
         if(document.getElementById('L15')) document.getElementById('L15').innerHTML = "After install:";
         if(document.getElementById('L18')) document.getElementById('L18').innerHTML = 'Imprint';
         if(document.getElementById('L19')) document.getElementById('L19').innerHTML = 'Data privacy';
+		if(document.getElementById('L20')) document.getElementById('L20').innerHTML = 'Only download .bin file (to install later manually)'; 
     }
 	ShowImprint();
 	ShowDataPrivacy();
@@ -143,6 +151,9 @@ function selectSoftware() {
     var manifest_file = selected.options[selected.selectedIndex].dataset.manifest_file;
 	
 	if(document.getElementById('install_btn')) document.getElementById('install_btn').setAttribute('manifest',manifest_file);
+	
+	var download_file = selected.options[selected.selectedIndex].dataset.download_file;
+	document.getElementById('download_btn').setAttribute('href',download_file);
 	
 }
   
@@ -178,6 +189,7 @@ window.onload = function () {
         } else {
             document.getElementById('FullContainer1').innerHTML = "<span id=\"L10\">Unfortunately your browser is not yet supported for installation via USB!<br>Please try on Chrome (for Desktop) or Microsoft Edge.<br><br>Available software versions:</span><br>";
         }
+		document.getElementById('FullContainer2').style.display="none";
     }
 	selectSoftware();
 	LangChanged();
