@@ -42,7 +42,7 @@
 		  <div class="form-floating">
 			<select id="software_version" onchange="selectSoftware();" class="form-select" aria-label="" style="min-width: 20em; width:auto;">
         <optgroup label="Version 30.035 DEMO">
-		<option data-manifest_file="/cangw/manifest_v10_rc.json" data-download_file="/cangw/CAN_Gateway_v30_325_DEMO_HWv10.bin"><span id="L06">CAN-Gateway Demo for CAN-Gateway development board V10</span></option>
+		<option data-manifest_file="/cangw/manifest_v10_rc.json" data-download_file="/cangw/CAN_Gateway_v30_325_DEMO_HWv10.bin"><span id="L06a">CAN-Gateway Demo for CAN-Gateway development board V10</span></option>
 	</optgroup>
 	<optgroup label="Version 30.025 DEMO">
               <option data-manifest_file="/cangw/manifest_v8_rc.json" data-download_file="/cangw/CAN_Gateway_v30_025_DEMO_HWv7v8.bin"><span id="L06">CAN-Gateway Demo for CAN-Gateway development board V8</span></option>
@@ -114,6 +114,7 @@ function LangChanged() {
         if(document.getElementById('L04')) document.getElementById('L04').innerHTML = "Kein Board wurde gefunden?";
         if(document.getElementById('L05')) document.getElementById('L05').innerHTML = "Klicken Sie auf \"Install CAN-GATEWAY\"";
         if(document.getElementById('L06')) document.getElementById('L06').innerHTML = "CAN-Gateway Demo für CAN-Gateway development board V8";
+	if(document.getElementById('L06a')) document.getElementById('L06a').innerHTML = "CAN-Gateway Demo für CAN-Gateway development board V10";
         if(document.getElementById('L07')) document.getElementById('L07').innerHTML = "CAN-Gateway Demo für CAN-Gateway HW V5";
         if(document.getElementById('L08')) document.getElementById('L08').innerHTML = "CAN-Gateway Demo für Olimex ESP32-EVB(-EA) board";
         if(document.getElementById('L09')) document.getElementById('L09').innerHTML = "Installieren";
@@ -133,6 +134,7 @@ function LangChanged() {
         if(document.getElementById('L04')) document.getElementById('L04').innerHTML = "No board found?";
         if(document.getElementById('L05')) document.getElementById('L05').innerHTML = "Click on \"Install CAN-GATEWAY\"";
         if(document.getElementById('L06')) document.getElementById('L06').innerHTML = "CAN-Gateway Demo for CAN-Gateway development board V8";
+	if(document.getElementById('L06a')) document.getElementById('L06a').innerHTML = "CAN-Gateway Demo for CAN-Gateway development board V10";
         if(document.getElementById('L07')) document.getElementById('L07').innerHTML = "CAN-Gateway Demo for CAN-Gateway HW V5";
         if(document.getElementById('L08')) document.getElementById('L08').innerHTML = "CAN-Gateway Demo for Olimex ESP32-EVB(-EA) board";
         if(document.getElementById('L09')) document.getElementById('L09').innerHTML = "Install";
