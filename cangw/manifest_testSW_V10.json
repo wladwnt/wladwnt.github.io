@@ -1,0 +1,15 @@
+{
+  "name": "CAN-Gateway (for board type: V10)",
+  "version": "30.001",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "boot_app0_v202.bin", "offset": 57344 },
+        { "path": "CAN_Gateway.ino.bootloader_v202.bin", "offset": 4096 },
+        { "path": "ESP32_Loader_V10.ino.bin", "offset": 65536 },
+        { "path": "CAN_Gateway.ino.partitions_v202.bin", "offset": 32768 }
+      ]
+    }
+  ]
+}
